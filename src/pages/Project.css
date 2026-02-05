@@ -1,9 +1,10 @@
 .project-container {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .project-grid {
-    border: 1px solid black;
+    /*border: 0.2px solid grey;*/
+    /*border-radius: 15px;*/
     padding: 1%;
     margin: 10%;
 }

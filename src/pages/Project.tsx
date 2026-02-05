@@ -1,7 +1,20 @@
 import './Project.css'
 import {Container, Grid, Badge, Group} from '@mantine/core';
 
-function Project() {
+export interface ProjectProps {
+    title: string;
+    tags: string[];
+    description: string;
+    relevantLinks?: string[];
+    demoVidLink: string;
+    srcCodeLink: string;
+}
+
+// TODO: get project from json
+function Project(props: ProjectProps) {
+    // Get Props:
+    const {title, tags, description, relevantLinks, demoVidLink, srcCodeLink} = props;
+
     return (
         <>
             <Container my="md" className="project-container">
@@ -10,17 +23,15 @@ function Project() {
                     {/*Project Title and Tags:*/}
                     <Grid.Col span={12}>
                         <div className="project-title">
-                            <h1>Project Name</h1>
+                            <h1>{title}</h1>
                             <Group>
-                                <Badge size="lg" color="gray">
-                                    Tag 1
-                                </Badge>
-                                <Badge size="lg" color="gray">
-                                    Tag 2
-                                </Badge>
-                                <Badge size="lg" color="gray">
-                                    Tag 3
-                                </Badge>
+                                {
+                                    tags.map(tag => (
+                                        <Badge size="lg" color="gray">
+                                            {tag}
+                                        </Badge>
+                                    ))
+                                }
                             </Group>
                         </div>
                     </Grid.Col>
@@ -28,20 +39,28 @@ function Project() {
                     {/*Project Description and Relevant Links*/}
                     <Grid.Col span={12}>
                         <div className="project-description">
-                            <p>Description of project</p>
-                            <p>Relevant links</p>
+                            <p>{description}</p>
+
+                            {
+                                relevantLinks !== undefined && relevantLinks?.length > 0 && (
+                                    relevantLinks.map(link => (
+                                        <p>{link}</p>
+                                    ))
+                                )
+                            }
+
                         </div>
                     </Grid.Col>
 
                     {/*Demo Video and Link to Source Code*/}
                     <Grid.Col span={6}>
                         <div className="project-box">
-                            <p>Demo video, pics, etc.</p>
+                            <p>{demoVidLink}</p>
                         </div>
                     </Grid.Col>
                     <Grid.Col span={6}>
                         <div className="project-box">
-                            <p>Link to source code</p>
+                            <p>{srcCodeLink}</p>
                         </div>
                     </Grid.Col>
                 </Grid>
