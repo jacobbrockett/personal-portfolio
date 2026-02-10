@@ -1,16 +1,7 @@
 import './Project.css'
 import {Container, Grid, Badge, Group} from '@mantine/core';
+import type {ProjectProps} from "../types/ProjectProps.ts";
 
-export interface ProjectProps {
-    title: string;
-    tags: string[];
-    description: string;
-    relevantLinks?: string[];
-    demoVidLink: string;
-    srcCodeLink: string;
-}
-
-// TODO: get project from json
 function Project(props: ProjectProps) {
     // Get Props:
     const {title, tags, description, relevantLinks, demoVidLink, srcCodeLink} = props;
