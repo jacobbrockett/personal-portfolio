@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Network Packet Analyzer",
+    "tags": [
+      "Python",
+      "Networking",
+      "Scapy"
+    ],
+    "description": "A packet sniffing and analysis tool that captures and summarizes TCP/IP traffic over a configurable time window.",
+    "relevantLinks": [
+      "https://example.com/report",
+      "https://example.com/demo"
+    ],
+    "demoVidLink": "https://youtube.com/watch?v=example1",
+    "srcCodeLink": "https://github.com/username/packet-analyzer"
+  },
+  {
+    "title": "2D Unity Platformer",
+    "tags": [
+      "Unity",
+      "C#",
+      "Game Development"
+    ],
+    "description": "A 2D platformer featuring physics-based movement, enemy AI, and level transitions.",
+    "demoVidLink": "https://youtube.com/watch?v=example2",
+    "srcCodeLink": "https://github.com/username/unity-platformer"
+  }
+]
