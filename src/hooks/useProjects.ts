@@ -28,5 +28,5 @@ export function useProjects() {
             });
     }, []);
 
-    return { projects, loading, error };
+    return {projects, loading, error};
 }

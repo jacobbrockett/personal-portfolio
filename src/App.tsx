@@ -7,7 +7,7 @@ import {useProjects} from "./hooks/useProjects.ts";
 
 function App() {
     // TODO: REMOVE PLACEHOLDER:
-    const { projects, loading, error } = useProjects();
+    const {projects, loading, error} = useProjects();
     const project: ProjectProps = projects[0];
 
     if (loading) return <p>Loading...</p>;
