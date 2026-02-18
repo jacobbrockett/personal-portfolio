@@ -1,16 +1,18 @@
 import './App.css'
 import '@mantine/core/styles.css';
 import {MantineProvider} from "@mantine/core";
-import ProjectListPage from "./pages/ProjectListPage.tsx";
+import { Routes, Route } from "react-router-dom";
+import ProjectCardsPage from "./pages/ProjectCardsPage.tsx";
+import ProjectPage from "./pages/ProjectPage.tsx";
 
 function App() {
 
-
     return (
         <MantineProvider>
-            <>
-                <ProjectListPage/>
-            </>
+            <Routes>
+                <Route path="/" element={<ProjectCardsPage/>} />
+                <Route path="/project/:id" element={<ProjectPage />} />
+            </Routes>
         </MantineProvider>
     )
 }
