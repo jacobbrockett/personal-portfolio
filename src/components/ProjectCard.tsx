@@ -8,12 +8,17 @@ function ProjectCard(props: ProjectProps) {
     const {title, tags, description} = props;
 
     return (
-        <Card withBorder radius="md" className={classes.card}>
+        <Card
+            withBorder
+            radius="md"
+            className={classes.card}
+            component={Link}
+            to={`/project/${title}`}
+        >
             <div className={classes.content}>
                 <Text
                     className={classes.title}
-                    component={Link}
-                    to={`/project/${title}`}
+
                 >
                     {title}
                 </Text>
