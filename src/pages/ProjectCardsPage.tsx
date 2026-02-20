@@ -1,7 +1,7 @@
 import {GetProjectsDictionary} from "../hooks/useProjects.ts";
 import {Container, Grid} from "@mantine/core";
 import ProjectCard from "../components/ProjectCard.tsx";
-import classes from "../components/Project.module.css";
+import classes from "./ProjectCardsPage.module.css";
 
 
 function ProjectCardsPage() {
@@ -12,10 +12,10 @@ function ProjectCardsPage() {
 
     return (
         <Container my="md">
-            <Grid columns={12} className={classes.projectGrid}>
+            <Grid columns={12} >
                 {
                     Object.values(projects).map(project => (
-                        <Grid.Col span={6}>
+                        <Grid.Col span={6} className={classes.projectCardGridCol}>
                             <ProjectCard
                                 title={project.title}
                                 tags={project.tags}

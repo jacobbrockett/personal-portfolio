@@ -3,15 +3,13 @@ import classes from './ProjectCard.module.css';
 import type {ProjectProps} from "../types/ProjectProps.ts";
 import {Link} from "react-router-dom";
 
-// import type {ProjectProps} from "../types/ProjectProps.ts";
-
 function ProjectCard(props: ProjectProps) {
     // Get Props:
     const {title, tags, description} = props;
 
     return (
         <Card withBorder radius="md" className={classes.card}>
-            <Card.Section>
+            <div className={classes.content}>
                 <Text
                     className={classes.title}
                     component={Link}
@@ -20,24 +18,27 @@ function ProjectCard(props: ProjectProps) {
                     {title}
                 </Text>
 
-                <Text fz="sm" lineClamp={4} opacity={0.9}>
+                <Text fz="sm" lineClamp={3} opacity={0.9}>
                     {description}
                 </Text>
-            </Card.Section>
+            </div>
 
+            <hr/>
 
-            <Group justify="space-between" className={classes.footer}>
-                <Group gap="xs">
+            <div className={classes.footer}>
+                <Group className={classes.footerTags}>
                     {
                         tags.map(tag => (
-                            <Badge size="lg" color="gray">
-                                {tag}
-                            </Badge>
-                        ))
+                                <Badge size="lg" color="gray">
+                                    {tag}
+                                </Badge>
+                            )
+                        )
                     }
                 </Group>
                 {/*TODO: add icons for youtube, github*/}
-            </Group>
+            </div>
+
         </Card>
     );
 }
