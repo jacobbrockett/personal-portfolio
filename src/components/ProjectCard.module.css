@@ -1,0 +1,40 @@
+.card {
+    border: black solid 1px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* space between title & description */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 140px;
+}
+
+.title {
+    display: block;
+    font-family: Outfit, var(--mantine-font-family), serif;
+    margin-top: var(--mantine-spacing-md);
+    margin-bottom: 7px;
+    color: var(--mantine-color-bright);
+    font-weight: 500;
+}
+
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footerTags {
+    justify-content: center;
+}
+
+hr {
+    border-top: 1px solid lightgrey;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}

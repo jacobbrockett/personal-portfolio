@@ -11,15 +11,20 @@ async function loadProjects(): Promise<ProjectProps[]> {
     return await response.json();
 }
 
-export function useProjects() {
-    const [projects, setProjects] = useState<ProjectProps[]>([]);
+export function GetProjectsDictionary() {
+    const [projects, setProjects] = useState<Record<string, ProjectProps>>({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         loadProjects()
-            .then(data => {
-                setProjects(data);
+            .then((data: ProjectProps[]) => {
+                const dictionary: Record<string, ProjectProps> =
+                    Object.fromEntries(
+                        data.map(project => [project.title, project])
+                    );
+
+                setProjects(dictionary);
                 setLoading(false);
             })
             .catch(err => {

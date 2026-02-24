@@ -1,32 +1,20 @@
 import './App.css'
-import Project from "./pages/Project.tsx";
-import type {ProjectProps} from "./types/ProjectProps";
 import '@mantine/core/styles.css';
 import {MantineProvider} from "@mantine/core";
-import {useProjects} from "./hooks/useProjects.ts";
+import { Routes, Route } from "react-router-dom";
+import ProjectCardsPage from "./pages/ProjectCardsPage.tsx";
+import ProjectPage from "./pages/ProjectPage.tsx";
 
 function App() {
-    // TODO: REMOVE PLACEHOLDER:
-    const {projects, loading, error} = useProjects();
-    const project: ProjectProps = projects[0];
-
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error}</p>;
 
     return (
         <MantineProvider>
-            <>
-                <Project
-                    title={project.title}
-                    tags={project.tags}
-                    description={project.description}
-                    relevantLinks={project.relevantLinks}
-                    demoVidLink={project.demoVidLink}
-                    srcCodeLink={project.srcCodeLink}
-                />
-            </>
+            <Routes>
+                <Route path="/" element={<ProjectCardsPage/>} />
+                <Route path="/project/:id" element={<ProjectPage />} />
+            </Routes>
         </MantineProvider>
     )
 }
 
-export default App
+export default App;

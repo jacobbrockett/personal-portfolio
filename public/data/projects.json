@@ -6,7 +6,7 @@
       "Networking",
       "Scapy"
     ],
-    "description": "A packet sniffing and analysis tool that captures and summarizes TCP/IP traffic over a configurable time window.",
+    "description": "A packet sniffing and analysis tool that captures live TCP/IP traffic using Scapy and summarizes statistics such as packet counts, protocol distribution, and top talkers over a configurable time window. Includes filtering by IP, port, and protocol, as well as CSV export for offline analysis.",
     "relevantLinks": [
       "https://example.com/report",
       "https://example.com/demo"
@@ -21,8 +21,74 @@
       "C#",
       "Game Development"
     ],
-    "description": "A 2D platformer featuring physics-based movement, enemy AI, and level transitions.",
+    "description": "A 2D platformer built in Unity featuring physics-based character movement, enemy AI with patrol and chase behaviors, collectible items, and scene transitions. Includes a main menu, pause system, and basic sound design.",
     "demoVidLink": "https://youtube.com/watch?v=example2",
     "srcCodeLink": "https://github.com/username/unity-platformer"
+  },
+  {
+    "title": "Flask REST API with Blueprint Architecture",
+    "tags": [
+      "Python",
+      "Flask",
+      "REST API",
+      "Backend"
+    ],
+    "description": "A modular RESTful API built with Flask using Blueprints to separate routes and logic. Implements CRUD operations for multiple resources, JWT-based authentication, request validation, and structured error handling. Designed with scalability and clean architecture in mind.",
+    "relevantLinks": [
+      "https://example.com/api-docs"
+    ],
+    "demoVidLink": "https://youtube.com/watch?v=example3",
+    "srcCodeLink": "https://github.com/username/flask-rest-api"
+  },
+  {
+    "title": "Dockerized Reverse Proxy Setup",
+    "tags": [
+      "Docker",
+      "Nginx",
+      "DevOps",
+      "CI/CD"
+    ],
+    "description": "A multi-container Docker setup with separate web applications behind an Nginx reverse proxy. Supports domain-based routing (e.g., app1.localhost, app2.localhost), SSL configuration with self-signed certificates, and automated image builds using GitHub Actions.",
+    "demoVidLink": "https://youtube.com/watch?v=example4",
+    "srcCodeLink": "https://github.com/username/docker-reverse-proxy"
+  },
+  {
+    "title": "Interactive Route Visualization App",
+    "tags": [
+      "Java",
+      "Android",
+      "Maps API",
+      "OpenRouteService"
+    ],
+    "description": "An Android application that fetches route data from OpenRouteService and visualizes it on an interactive map. Displays step-by-step directions, distance, and estimated travel time. Implements asynchronous network requests and JSON parsing.",
+    "relevantLinks": [
+      "https://example.com/design-doc"
+    ],
+    "demoVidLink": "https://youtube.com/watch?v=example5",
+    "srcCodeLink": "https://github.com/username/route-visualizer"
+  },
+  {
+    "title": "TCP Chat Server with Custom Protocol",
+    "tags": [
+      "Python",
+      "Sockets",
+      "Networking",
+      "Concurrency"
+    ],
+    "description": "A multi-client TCP chat server built using Python's socket library. Implements a custom message framing protocol, supports concurrent clients using threading or asyncio, and includes basic command handling (nicknames, private messages, broadcast).",
+    "demoVidLink": "https://youtube.com/watch?v=example6",
+    "srcCodeLink": "https://github.com/username/tcp-chat-server"
+  },
+  {
+    "title": "Personal Portfolio with React and TypeScript",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Frontend",
+      "CSS Modules"
+    ],
+    "description": "A responsive personal portfolio website built with React and TypeScript. Features dynamic project pages rendered from JSON data, client-side routing, reusable components, and scoped styling with CSS Modules. Includes smooth navigation between project detail views and the main listing page.",
+    "demoVidLink": "https://youtube.com/watch?v=example7",
+    "srcCodeLink": "https://github.com/username/react-portfolio"
   }
 ]

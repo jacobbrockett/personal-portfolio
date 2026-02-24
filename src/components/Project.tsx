@@ -1,4 +1,4 @@
-import './Project.css'
+import classes from './Project.module.css'
 import {Container, Grid, Badge, Group} from '@mantine/core';
 import type {ProjectProps} from "../types/ProjectProps.ts";
 
@@ -8,12 +8,12 @@ function Project(props: ProjectProps) {
 
     return (
         <>
-            <Container my="md" className="project-container">
-                <Grid columns={12} className="project-grid">
+            <Container my="md" className={classes.projectContainer}>
+                <Grid columns={12} className={classes.projectGrid}>
 
                     {/*Project Title and Tags:*/}
                     <Grid.Col span={12}>
-                        <div className="project-title">
+                        <div className={classes.projectTitle}>
                             <h1>{title}</h1>
                             <Group>
                                 {
@@ -29,7 +29,7 @@ function Project(props: ProjectProps) {
 
                     {/*Project Description and Relevant Links*/}
                     <Grid.Col span={12}>
-                        <div className="project-description">
+                        <div className={classes.projectDescription}>
                             <p>{description}</p>
 
                             {
@@ -45,12 +45,12 @@ function Project(props: ProjectProps) {
 
                     {/*Demo Video and Link to Source Code*/}
                     <Grid.Col span={6}>
-                        <div className="project-box">
+                        <div className={classes.projectBox}>
                             <p>{demoVidLink}</p>
                         </div>
                     </Grid.Col>
                     <Grid.Col span={6}>
-                        <div className="project-box">
+                        <div className={classes.projectBox}>
                             <p>{srcCodeLink}</p>
                         </div>
                     </Grid.Col>

@@ -1,19 +1,16 @@
-.project-container {
-    /*border: 1px solid black;*/
+.projectContainer {
 }
 
-.project-grid {
-    /*border: 0.2px solid grey;*/
-    /*border-radius: 15px;*/
+.projectGrid {
     padding: 1%;
     margin: 10%;
 }
 
-.project-title {
+.projectTitle {
     padding: 2%;
 }
 
-.project-description {
+.projectDescription {
     border: 0.2px solid grey;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05),
@@ -21,11 +18,12 @@
     padding: 2%;
 }
 
-.project-box {
+.projectBox {
     border: 0.2px solid grey;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05),
     0 4px 10px rgba(0, 0, 0, 0.10);
     padding: 2%;
     justify-items: center;
+    height: 100%;
 }
