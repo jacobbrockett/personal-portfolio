@@ -1,0 +1,31 @@
+
+.homeContainer {
+    border: 1px solid red;
+    padding: 1%;
+}
+
+.homeGrid {
+    border:1px solid green;
+    padding: 1%;
+}
+
+.helloWorld {
+    border: 1px solid blue;
+    padding: 1%;
+    height: 100%;
+    justify-items: center;
+}
+
+.aboutMe {
+    border: 1px solid brown;
+    padding: 1%;
+    height: 100%;
+    justify-items: center;
+}
+
+.projectCarousel {
+    border: 1px solid orange;
+    padding: 1%;
+    height: 100%;
+    justify-items: center;
+}
