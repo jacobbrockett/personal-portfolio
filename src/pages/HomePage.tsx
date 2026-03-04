@@ -1,5 +1,6 @@
 import {Container, Grid} from '@mantine/core';
 import classes from './HomePage.module.css';
+import ProjectCarousel from "../components/ProjectCarousel.tsx";
 
 function HomePage() {
     return (
@@ -31,9 +32,7 @@ function HomePage() {
                     {/*Project Carousel*/}
                     <Grid.Col span={10}>
                         <div className={classes.projectCarousel}>
-                            <h1>
-                                Project Carousel
-                            </h1>
+                            <ProjectCarousel/>
                         </div>
                     </Grid.Col>
 
