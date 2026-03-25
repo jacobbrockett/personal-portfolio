@@ -1,6 +1,7 @@
 import {Container, Grid} from '@mantine/core';
 import classes from './HomePage.module.css';
 import ProjectCarousel from "../components/ProjectCarousel.tsx";
+import HelloWorldAnimation from "../components/HelloWorldAnimation.tsx";
 
 function HomePage() {
     return (
@@ -11,9 +12,7 @@ function HomePage() {
                     {/*Hello, World*/}
                     <Grid.Col span={4}>
                         <div className={classes.helloWorld}>
-                            <h1>
-                                Hello, World!
-                            </h1>
+                            <HelloWorldAnimation />
                         </div>
                     </Grid.Col>
 
