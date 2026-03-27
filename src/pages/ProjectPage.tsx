@@ -1,5 +1,5 @@
 import {Container} from "@mantine/core";
-import Project from "../components/Project.tsx";
+import ProjectOverview from "../components/ProjectOverview.tsx";
 import {GetProjectsDictionary} from "../hooks/useProjects.ts";
 import { useParams } from "react-router-dom";
 
@@ -28,7 +28,7 @@ function ProjectPage()
 
     return (
         <Container my="md">
-            <Project
+            <ProjectOverview
                 title={project.title}
                 tags={project.tags}
                 description={project.description}

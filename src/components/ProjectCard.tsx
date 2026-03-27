@@ -13,7 +13,7 @@ function ProjectCard(props: ProjectProps) {
             radius="md"
             className={classes.card}
             component={Link}
-            to={`/project/${title}`}
+            to={`/projects/${title}`}
         >
             <div className={classes.content}>
                 <Text

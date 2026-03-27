@@ -1,0 +1,11 @@
+:global(.typed-cursor) {
+    animation: blink 1s step-start infinite;
+    display: inline-block;
+    transform: scaleX(0.5);       /* halves the width */
+    transform-origin: left center; /* shrinks from the left so it stays close to the text */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}

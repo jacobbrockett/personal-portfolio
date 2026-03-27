@@ -1,8 +1,8 @@
-import classes from './Project.module.css'
+import classes from './ProjectOverview.module.css'
 import {Container, Grid, Badge, Group} from '@mantine/core';
 import type {ProjectProps} from "../types/ProjectProps.ts";
 
-function Project(props: ProjectProps) {
+function ProjectOverview(props: ProjectProps) {
     // Get Props:
     const {title, tags, description, relevantLinks, demoVidLink, srcCodeLink} = props;
 
@@ -61,4 +61,4 @@ function Project(props: ProjectProps) {
     )
 }
 
-export default Project;
+export default ProjectOverview;
