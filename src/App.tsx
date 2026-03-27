@@ -7,6 +7,9 @@ import HomePage from "./pages/HomePage.tsx";
 import ProjectCardsPage from "./pages/ProjectCardsPage.tsx";
 import ProjectPage from "./pages/ProjectPage.tsx";
 import HeaderNavBar from "./components/HeaderNavBar.tsx";
+import CareerPage from "./pages/CareerPage.tsx";
+import AboutPage from "./pages/AboutPage.tsx";
+import ContactPage from "./pages/ContactPage.tsx";
 
 function App() {
 
@@ -17,6 +20,9 @@ function App() {
                 <Route path="/" element={<HomePage/>} />
                 <Route path="/projects" element={<ProjectCardsPage/>}/>
                 <Route path="/projects/:id" element={<ProjectPage />} />
+                <Route path="/career" element={<CareerPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
             </Routes>
         </MantineProvider>
     )

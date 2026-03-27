@@ -7,6 +7,9 @@ import {IconRocket} from '@tabler/icons-react';
 const links = [
     {link: '/', label: 'Home'},
     {link: '/projects', label: 'Projects'},
+    {link: '/career', label: 'Career'},
+    {link: '/about', label: 'About'},
+    {link: '/contact', label: 'Contact'},
 ];
 
 function HeaderNavBar() {
