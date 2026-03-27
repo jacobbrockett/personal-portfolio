@@ -3,22 +3,15 @@ import {useDisclosure} from '@mantine/hooks';
 import classes from './HeaderNavBar.module.css';
 import {NavLink} from 'react-router-dom';
 import {IconRocket} from '@tabler/icons-react';
-
-const links = [
-    {link: '/', label: 'Home'},
-    {link: '/projects', label: 'Projects'},
-    {link: '/career', label: 'Career'},
-    {link: '/about', label: 'About'},
-    {link: '/contact', label: 'Contact'},
-];
+import {PageRoutes} from "../types/WebNavigation.tsx";
 
 function HeaderNavBar() {
     const [opened, {toggle}] = useDisclosure(false);
 
-    const items = links.map((link) => (
+    const items = PageRoutes.map((link) => (
         <NavLink
             key={link.label}
-            to={link.link}
+            to={link.path}
             className={({isActive}) =>
                 `${classes.link} ${isActive ? classes.active : ''}`
             }

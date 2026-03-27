@@ -2,27 +2,19 @@ import './App.css'
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 import {MantineProvider} from "@mantine/core";
-import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage.tsx";
-import ProjectCardsPage from "./pages/ProjectCardsPage.tsx";
-import ProjectPage from "./pages/ProjectPage.tsx";
+import {Routes, Route} from "react-router-dom";
 import HeaderNavBar from "./components/HeaderNavBar.tsx";
-import CareerPage from "./pages/CareerPage.tsx";
-import AboutPage from "./pages/AboutPage.tsx";
-import ContactPage from "./pages/ContactPage.tsx";
+import {PageRoutes, HiddenRoutes} from "./types/WebNavigation.tsx";
 
 function App() {
 
     return (
         <MantineProvider>
-            <HeaderNavBar />
+            <HeaderNavBar/>
             <Routes>
-                <Route path="/" element={<HomePage/>} />
-                <Route path="/projects" element={<ProjectCardsPage/>}/>
-                <Route path="/projects/:id" element={<ProjectPage />} />
-                <Route path="/career" element={<CareerPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
+                {[...PageRoutes, ...HiddenRoutes].map(({path, component: Component}) => (
+                    <Route key={path} path={path} element={<Component/>}/>
+                ))}
             </Routes>
         </MantineProvider>
     )
